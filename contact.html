@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact – Les Maisons de Marion</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<nav class="navbar"><ul>
+ <li><a href="index.html">Accueil</a></li>
+ <li><a href="boulangerie.html">Boulangerie Bleue</a></li>
+ <li><a href="sweet-bakery.html">Sweet Bakery</a></li>
+ <li><a href="petite-garden.html">Petite Garden</a></li>
+ <li><a href="contact.html">Contact</a></li>
+</ul></nav>
+<header class="hero"><h1>Commander</h1><p>Envoie ta demande directement – confirmée par e-mail.</p></header>
+<main>
+  <div class="box" id="commande" style="max-width:780px;margin:1rem auto;">
+    <p class="small">Ce formulaire enverra un e-mail à <b>fafa.rais@icloud.com</b> via un service sécurisé.</p>
+    <form id="orderForm" action="https://formspree.io/f/xnnzljyw" method="POST">
+      <div class="kv">
+        <div><b>Nom</b><input name="nom" required style="width:100%"></div>
+        <div><b>Email</b><input name="email" type="email" required style="width:100%"></div>
+        <div><b>Modèle</b><input id="modele" name="modele" required style="width:100%"></div>
+        <div><b>Quantité</b><input name="quantite" type="number" min="1" value="1" required style="width:100%"></div>
+      </div>
+      <div class="box" style="margin-top:1rem">
+        <b>Adresse d’expédition</b>
+        <textarea name="adresse" rows="3" style="width:100%" required></textarea>
+        <b>Message</b>
+        <textarea name="message" rows="4" style="width:100%"></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="Nouvelle commande – Les Maisons de Marion">
+      <p class="cta" style="margin-top:1rem">
+        <button class="btn" type="submit">Envoyer la commande</button>
+        <a class="btn secondary" href="mailto:fafa.rais@icloud.com?subject=Contact%20-%20Les%20Maisons%20de%20Marion">Ou par e-mail</a>
+      </p>
+      <p class="small">Après envoi : vérifie tes spams si tu ne reçois pas la confirmation.</p>
+    </form>
+  </div>
+</main>
+<footer>&copy; 2025 Les Maisons de Marion.</footer>
+<script>
+// Pré-remplir le modèle depuis l’URL: contact.html?modele=Boulangerie%20Bleue
+const params=new URLSearchParams(location.search);const m=params.get('modele');
+if(m) document.getElementById('modele').value=decodeURIComponent(m);
+</script>
+</body></html>
