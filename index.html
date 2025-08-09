@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Maisons de Marion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <!-- Image d’en‑tête : photo des créations de Marion -->
+    <img src="hero.jpg" alt="Les créations miniatures de Marion" class="hero-image">
+    <div class="hero-text">
+      <h1>Les Maisons de Marion</h1>
+      <p>Chaque maison est fabriquée à la main de A à Z, avec passion et patience, pour devenir une pièce unique.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="listing">
+      <h2>Nos maisons miniatures</h2>
+      <p style="text-align:center; max-width:700px; margin: 0 auto 2rem;">
+        Chaque modèle est conçu par Marion seule, durant ses moments libres. Elle sélectionne avec soin les matériaux et assemble chaque élément à la main. La qualité de fabrication et le caractère unique de chaque pièce sont les meilleurs arguments : aucune maison ne ressemble à une autre !
+      </p>
+      <div class="card-container">
+        <!-- Grande maison : Boulangerie Bleue -->
+        <div class="card">
+          <img src="boulangerie.jpg" alt="Boulangerie bleue">
+          <h3>Boulangerie Bleue</h3>
+          <p>Une boutique miniature riche en détails, peinte et assemblée à la main.</p>
+          <p class="price">Prix : 95 €</p>
+          <a href="#contact" class="btn">Nous contacter</a>
+        </div>
+        <!-- Petite maison : Sweet Bakery -->
+        <div class="card">
+          <img src="sweet_bakery.jpg" alt="Sweet Bakery">
+          <h3>Sweet Bakery</h3>
+          <p>Une pâtisserie adorable, parfaite pour les gourmands en miniature.</p>
+          <p class="price">Prix : 55 €</p>
+          <a href="#contact" class="btn">Nous contacter</a>
+        </div>
+        <!-- Petite maison : Petite Garden -->
+        <div class="card">
+          <img src="petite_garden.jpg" alt="Petite Garden">
+          <h3>Petite Garden</h3>
+          <p>Un jardin fleuri et coloré avec de multiples accessoires faits main.</p>
+          <p class="price">Prix : 55 €</p>
+          <a href="#contact" class="btn">Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contactez-nous</h2>
+      <form onsubmit="alert('Merci pour votre message ! Nous vous répondrons rapidement.'); return false;">
+        <div class="form-group">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E‑mail :</label>
+          <input type="email" id="email" name="email" placeholder="Votre e‑mail" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Les Maisons de Marion. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
